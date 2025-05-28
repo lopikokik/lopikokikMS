@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Микропроцессорлар мен микроконтроллерлер</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>MS</h1>
+      </div>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Іздеу...">
+        <button id="search-button">Іздеу</button>
+      </div>
+      <div class="auth-buttons" id="auth-buttons">
+        <button id="login-button">Кіру</button>
+        <button id="register-button">Тіркелу</button>
+      </div>
+      <div class="user-profile" id="user-profile" style="display: none;">
+        <span id="username-display"></span>
+        <button id="logout-button">Шығу</button>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <ul class="main-menu">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Микропроцессорлар</a>
+          <ul class="dropdown-menu">
+            <li><a href="#intel">Intel</a></li>
+            <li><a href="#amd">AMD</a></li>
+            <li><a href="#arm">ARM</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Микроконтроллерлер</a>
+          <ul class="dropdown-menu">
+            <li><a href="#arduino">Arduino</a></li>
+            <li><a href="#raspberry">Raspberry Pi</a></li>
+            <li><a href="#stm32">STM32</a></li>
+          </ul>
+        </li>
+        <li><a href="#applications">Қолданылуы</a></li>
+        <li><a href="#news">Жаңалықтар</a></li>
+        <li><a href="#contact">Кері байланыс</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Жүйеге кіру</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Құпиясөз:</label>
+          <input type="password" id="login-password" required>
+        </div>
+        <button type="submit">Кіру</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="register-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Тіркелу</h2>
+      <form id="register-form">
+        <div class="form-group">
+          <label for="register-username">Пайдаланушы аты:</label>
+          <input type="text" id="register-username" required>
+        </div>
+        <div class="form-group">
+          <label for="register-email">Email:</label>
+          <input type="email" id="register-email" required>
+        </div>
+        <div class="form-group">
+          <label for="register-password">Құпиясөз:</label>
+          <input type="password" id="register-password" required>
+        </div>
+        <div class="form-group">
+          <label for="register-password-confirm">Құпиясөзді растаңыз:</label>
+          <input type="password" id="register-password-confirm" required>
+        </div>
+        <button type="submit">Тіркелу</button>
+      </form>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Микропроцессорлар мен микроконтроллерлер әлемі</h2>
+        <p>Қазіргі микропроцессорлар мен микроконтроллерлер технологияларына арналған порталға қош келдіңіз</p>
+      </div>
+    </section>
+
+    <section id="intel" class="section">
+      <div class="container">
+        <h2>Intel процессорлары</h2>
+        <div class="content-wrapper">
+          <div class="text-content">
+            <p>Intel — электрондық құрылғылар мен есептеу техникасына арналған компоненттер өндіретін америкалық компания. Ол ең алдымен микропроцессорларды жасаушы ретінде танымал.</p>
+            <p>Intel Core i9, i7, i5 және i3 процессорлары — жұмыс өнімділігі мен бағасы бойынша әртүрлі деңгейдегі десктоп пен ноутбуктерге арналған желілер.</p>
+          </div>
+          <div class="image-content">
+            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Intel процессоры">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="amd" class="section">
+      <div class="container">
+        <h2>AMD процессорлары</h2>
+        <div class="content-wrapper">
+          <div class="image-content">
+            <img src="assets/123123123.webp" alt="AMD процессоры">
+          </div>
+          <div class="text-content">
+            <p>Advanced Micro Devices (AMD) — интегралдық микросхемалық электроника өндіретін америкалық компания.</p>
+            <p>AMD Ryzen процессорлары жоғары өнімділік пен көп ағынды өңдеуді қамтамасыз етеді, бұл оларды ойыншылар мен кәсіпқойлар үшін тамаша таңдау етеді.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="arm" class="section">
+      <div class="container">
+        <h2>ARM архитектурасы</h2>
+        <div class="content-wrapper">
+          <div class="text-content">
+            <p>ARM (Advanced RISC Machines) — ARM Limited компаниясы әзірлеген 32-бит және 64-бит микропроцессорлық ядролар отбасы.</p>
+            <p>ARM архитектурасына негізделген процессорлар төмен қуат тұтынуымен ерекшеленеді және мобильді құрылғыларда, ендірілген жүйелерде және серверлерде қолданылады.</p>
+          </div>
+          <div class="image-content">
+            <img src="https://images.unsplash.com/photo-1580584126903-c17d41830450?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="ARM архитектурасы">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="arduino" class="section">
+      <div class="container">
+        <h2>Arduino</h2>
+        <div class="content-wrapper">
+          <div class="image-content">
+            <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Arduino">
+          </div>
+          <div class="text-content">
+            <p>Arduino — автоматтандыру мен робототехникаға арналған қарапайым жүйелер құру үшін аппараттық-бағдарламалық құралдар жиынтығы, бастаушыларға арналған.</p>
+            <p>Arduino платформасы қолжетімділігі мен қарапайымдылығы арқасында кең танымалдылыққа ие.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="raspberry" class="section">
+      <div class="container">
+        <h2>Raspberry Pi</h2>
+        <div class="content-wrapper">
+          <div class="text-content">
+            <p>Raspberry Pi — банк картасының өлшеміндей бірплаталы компьютер, бастапқыда информатика оқытуға арналған арзан шешім ретінде әзірленген.</p>
+            <p>Raspberry Pi түрлі жобалар үшін қолданылады: қарапайым үй автоматизациясынан бастап күрделі роботтар мен медиа-орталықтарға дейін.</p>
+          </div>
+          <div class="image-content">
+            <img src="assets/S600xU_2x.webp" alt="Raspberry Pi">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stm32" class="section">
+      <div class="container">
+        <h2>STM32</h2>
+        <div class="content-wrapper">
+          <div class="image-content">
+            <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="STM32">
+          </div>
+          <div class="text-content">
+            <p>STM32 — STMicroelectronics компаниясының 32-биттік микроконтроллерлер отбасы. Бұл микроконтроллерлер ARM Cortex-M ядроларына негізделген.</p>
+            <p>STM32 микроконтроллерлері өнеркәсіптік автоматтандыруда, медициналық құрылғыларда және тұтынушылық электроникада кеңінен қолданылады.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="applications" class="section">
+      <div class="container">
+        <h2>Микропроцессорлар мен микроконтроллерлерді қолдану</h2>
+        <div class="applications-grid">
+          <div class="application-item">
+            <h3>Өнеркәсіптік автоматтандыру</h3>
+            <p>Микроконтроллерлер өндірістік процестерді, роботтарды және конвейерлерді басқаруда қолданылады.</p>
+          </div>
+          <div class="application-item">
+            <h3>Тұрмыстық техника</h3>
+            <p>Кір жуғыш машиналардан бастап микротолқынды пештерге дейін — микроконтроллерлер заманауи тұрмыстық техниканы басқарады.</p>
+          </div>
+          <div class="application-item">
+            <h3>Автокөлік электроникасы</h3>
+            <p>Қазіргі көліктер ондаған микроконтроллерлермен жабдықталған — қозғалтқыштан бастап мультимедиа жүйесіне дейін.</p>
+          </div>
+          <div class="application-item">
+            <h3>Медициналық құрылғылар</h3>
+            <p>Микропроцессорлар күрделі медициналық құрылғылардың жұмысын қамтамасыз етеді: УДЗ-аппараттарынан бастап кардиостимуляторларға дейін.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="container">
+        <h2>Соңғы жаңалықтар</h2>
+        <div class="news-grid">
+          <div class="news-item">
+            <h3>Intel жаңа буын процессорларын ұсынды</h3>
+            <p class="news-date">2025 жылғы 15 мамыр</p>
+            <p>Intel компаниясы өнімділігі мен қуат үнемдеуі жақсартылған жаңа процессор буынын жариялады.</p>
+          </div>
+          <div class="news-item">
+            <h3>Arduino IDE жаңа нұсқасы шықты</h3>
+            <p class="news-date">2025 жылғы 10 мамыр</p>
+            <p>Жаңа платаларды қолдайтын және интерфейсі жаңартылған Arduino IDE жаңа нұсқасы жарық көрді.</p>
+          </div>
+          <div class="news-item">
+            <h3>Raspberry Pi жаңа үлгісін таныстырды</h3>
+            <p class="news-date">2025 жылғы 5 мамыр</p>
+            <p>Raspberry Pi қоры жаңартылған сипаттамалары бар жаңа үлгісін жариялады.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Кері байланыс</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="contact-name">Атыңыз:</label>
+            <input type="text" id="contact-name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email:</label>
+            <input type="email" id="contact-email" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Тақырып:</label>
+            <input type="text" id="contact-subject" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Хабарлама:</label>
+            <textarea id="contact-message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Жіберу</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Біз туралы</h3>
+          <p>MS — микропроцессорлар мен микроконтроллерлер туралы сенімді ақпарат көзі.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Жылдам сілтемелер</h3>
+          <ul>
+            <li><a href="#intel">Intel</a></li>
+            <li><a href="#amd">AMD</a></li>
+            <li><a href="#arduino">Arduino</a></li>
+            <li><a href="#raspberry">Raspberry Pi</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Байланыс</h3>
+          <p>Email: HOHO@gmail.com</p>
+          <p>Телефон: +77728454525</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MS Барлық құқықтар қорғалған.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
